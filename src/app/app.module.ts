@@ -16,6 +16,11 @@ import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProductComponent } from './pages/product/product.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { ErrorComponent } from './error/error.component';
+import { AboutComponent } from './web/about/about.component';
+import { ContactComponent } from './web/contact/contact.component';
+import { HomeComponent } from './web/home/home.component';
+import { Error404Component } from './error/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { CategoryComponent } from './pages/category/category.component';
     LoginComponent,
     DashboardComponent,
     ProductComponent,
-    CategoryComponent
+    CategoryComponent,
+    ErrorComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
