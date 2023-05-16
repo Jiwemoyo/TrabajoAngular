@@ -1,31 +1,28 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProductsComponent } from './products/products.component';
-import { CategoriesComponent } from './categories/categories.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   //rutas protegidas
-  {
-    path: 'dashboard', component: PagesComponent,
-    children: [
-      { path: '', component: DashboardComponent },
-      { path: 'products', component: ProductsComponent },
-      { path: 'categories', component: CategoriesComponent },
-      { path:'', redirectTo:'/dashboard', pathMatch:'full'},
-    ]
-  },
-  //{path:'**', component: NoFoundPageComponent},
-];
+    {path: '', component:PagesComponent},
+    {path: 'dashboard', component:DashboardComponent},
+    {path: 'category', component:CategoryComponent},
+    {path: 'product', component:ProductComponent},
+]
+  //{path: '**', component:NotFoundComponent},
+;
 
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
   exports:[
     RouterModule
-  ]
+  ],
 })
 export class PagesRoutingModule { }

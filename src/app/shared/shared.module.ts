@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavComponent } from './nav/nav.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavLeftComponent } from './nav-left/nav-left.component';
+import { NavComponent } from './nav/nav.component';
+import { SharedComponent } from './shared.component';
 
 
 
@@ -12,19 +13,19 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NavComponent,
-    SidebarComponent,
-    BreadcrumbsComponent
+    NavLeftComponent,
+    BreadcrumbsComponent,
+    SharedComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
-  HeaderComponent,
-  FooterComponent,
-  NavComponent,
-  SidebarComponent,
-  BreadcrumbsComponent
-]
+    HeaderComponent,
+    FooterComponent,
+    NavLeftComponent,
+    BreadcrumbsComponent,
+    SharedComponent,
+  ]
 })
-export class SharedModule { }
+export class SharedModule { };
